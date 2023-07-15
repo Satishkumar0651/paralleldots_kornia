@@ -4,6 +4,11 @@ from os import environ
 
 app = Flask(__name__)
 
+@app.route('/', methods=['GET'])
+def hello_word():
+    return "Hello World"
+
+
 @app.route('/match_images', methods=['POST'])
 def match_images():
     # Retrieve images from the request
