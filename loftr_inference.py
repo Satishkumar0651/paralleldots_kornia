@@ -11,7 +11,6 @@ import kornia.geometry as KG
 import matplotlib.pyplot as plt
 from werkzeug.utils import secure_filename
 import os
-print(cv2.__version__)
 
 def matchimage_save_output(fname1,fname2):
     # Save image files to temporary files
@@ -60,12 +59,6 @@ def matchimage_save_output(fname1,fname2):
         inliers,
         draw_dict={"inlier_color": (0.2, 1, 0.2), "tentative_color": None, "feature_color": (0.2, 0.5, 1), "vertical": False},
     )
-    # fig = plt.figure()
-    # ax = fig.add_subplot(1, 1, 1)
-    # Save the comparison image
-    # Cleanup temporary files
-    os.remove(temp_filepath1)
-    os.remove(temp_filepath2)
-    result_path = 'result1.png'
+    result_path = os.path.join('/tmp', 'result1.png')
     plt.savefig(result_path)
     return result_path
