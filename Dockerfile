@@ -1,5 +1,5 @@
 # Use a lightweight base image
-FROM python:3.8-slim-buster
+FROM jjanzic/docker-python3-opencv
 # Install build dependencies
 RUN apt-get update && \
     apt-get install -y gcc python3-dev libgl1-mesa-glx
