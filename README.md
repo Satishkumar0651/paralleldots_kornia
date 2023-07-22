@@ -29,7 +29,7 @@ The LoFTR Inference app is built using Flask and allows you to upload two images
     docker rm paralleldots_kornia-container
     docker run -d --name paralleldots_kornia-container -p 80:80 -v $(pwd):/app paralleldots_kornia
 ## Usage
-###Cloud Run (GCP)
+### Cloud Run (GCP)
 1. Open your Postman select post method and enter the url https://paralleldots-kornia-jezaajyhzq-uc.a.run.app/match_mages
 2. select two images under the Body- form data and press send
 3. The resultant image will be shown in the resultant tab in Postman 
